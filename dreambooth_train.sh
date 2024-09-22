@@ -1,0 +1,15 @@
+accelerate launch train_dreambooth.py \
+--pretrained_model_name_or_path="outputs" \
+--instance_data_dir="instances" \
+--class_data_dir="data" \
+--output_dir="output_dreambooth" \
+--validation_steps=4000 \
+--with_prior_preservation --prior_loss_weight=0.5 \
+--resolution=256 \
+--train_batch_size=1 \
+--gradient_accumulation_steps=1 \
+--learning_rate=3e-6 \
+--lr_scheduler="constant" \
+--lr_warmup_steps=0 \
+--num_class_images=1000 \
+--max_train_steps=4800

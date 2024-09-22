@@ -1,0 +1,15 @@
+accelerate launch train_unconditional.py \
+--train_data_dir "data" \
+--resolution=256 \
+--output_dir="outputs" \
+--train_batch_size=84 \
+--eval_batch_size=8 \
+--num_epochs=70 \
+--gradient_accumulation_steps=1 \
+--checkpointing_steps=8000 \
+--use_ema \
+--save_images_epochs=5 \
+--save_model_epochs=5 \
+--learning_rate=8.4e-5 \
+--lr_warmup_steps=500 \
+--mixed_precision="no"
