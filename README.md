@@ -43,3 +43,14 @@ For inference with DreamBooth, provide the output_dir parameter from the dreambo
 chmod +x dreambooth_inference.sh
 ./dreambooth_inference.sh
 ```
+## Results
+Base model:
+![base](./results/base_model_no_fine_tune.png)
+
+Model fine tuned with Heath Ledger Instances without preservation loss:
+![ftwopres](./results/fine_tuned_without_preservation_loss.png)
+
+Model fine tuned with Heath Ledger Instances with preservation loss:
+![ftwpres](./results/fine_tuned_with_preservation_loss.png)
+
+All results were discussed in the [results](https://github.com/a-caycioglu/unconditional-image-generation-latent-space/blob/main/results/results.pdf)
